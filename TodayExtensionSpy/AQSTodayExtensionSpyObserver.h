@@ -48,7 +48,7 @@ extern NSString *const kAQSTodayExtensionSpyStatusDidChangeNotification;
  *  The notification object is the observer and does not contain userInfo.
  *      
  *      AQSTodayExtensionObsever *observer = [AQSTodayExtensionObserver observerWithIdentifier:@"com.example.yourapp"];
- *      [observer observeStatus];
+ *      [observer observeOpenStatus];
  *      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangeTodayExtensionOpenStatus:) object:nil];
  */
 - (void)observeOpenStatus;
