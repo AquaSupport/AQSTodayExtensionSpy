@@ -47,6 +47,7 @@ NSString *const kAQSTodayExtensionSpyHasOpenedKey = @"AQSTodayExtensionSpyHasOpe
 }
 
 - (void)observeOpenStatus {
+    self.previousPastebaordString = [self pasteboard].string;
     // Dirty hack but neither KVO, NSNotification does not work properly.
     [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(checkPasteboard) userInfo:nil repeats:YES];
 }
@@ -56,11 +57,6 @@ NSString *const kAQSTodayExtensionSpyHasOpenedKey = @"AQSTodayExtensionSpyHasOpe
 - (void)checkPasteboard {
     // Do not check if it has not opened yet.
     if (![self pasteboard].string) { return; }
-    
-    // If it is the first interval.
-    if (self.previousPastebaordString == nil) {
-        self.previousPastebaordString = [self pasteboard].string;
-    }
     
     if ([[self pasteboard].string isEqualToString:self.previousPastebaordString] == NO) {
         [self postStatusDidChangeNotification];
