@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D42440F419CB01C7005EEDE6 /* AQSTodayExtensionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = D42440F319CB01C7005EEDE6 /* AQSTodayExtensionSpy.m */; };
+		D42440F719CB01CF005EEDE6 /* AQSTodayExtensionSpyObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = D42440F619CB01CF005EEDE6 /* AQSTodayExtensionSpyObserver.m */; };
 		D447057419CA6F6300B85F23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D447057319CA6F6300B85F23 /* main.m */; };
 		D447057719CA6F6300B85F23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D447057619CA6F6300B85F23 /* AppDelegate.m */; };
 		D447057A19CA6F6300B85F23 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447057919CA6F6300B85F23 /* ViewController.m */; };
@@ -18,8 +20,6 @@
 		D44705A419CA6FA600B85F23 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44705A319CA6FA600B85F23 /* TodayViewController.m */; };
 		D44705A619CA6FA600B85F23 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44705A519CA6FA600B85F23 /* MainInterface.storyboard */; };
 		D44705A919CA6FA600B85F23 /* testtoday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D447059B19CA6FA600B85F23 /* testtoday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D44705B219CA713F00B85F23 /* AQSTodayExtensionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = D44705B119CA713F00B85F23 /* AQSTodayExtensionSpy.m */; };
-		D44705B519CA729000B85F23 /* AQSTodayExtensionSpyObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = D44705B419CA729000B85F23 /* AQSTodayExtensionSpyObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +61,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D42440F219CB01C7005EEDE6 /* AQSTodayExtensionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQSTodayExtensionSpy.h; sourceTree = "<group>"; };
+		D42440F319CB01C7005EEDE6 /* AQSTodayExtensionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSTodayExtensionSpy.m; sourceTree = "<group>"; };
+		D42440F519CB01CF005EEDE6 /* AQSTodayExtensionSpyObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQSTodayExtensionSpyObserver.h; sourceTree = "<group>"; };
+		D42440F619CB01CF005EEDE6 /* AQSTodayExtensionSpyObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSTodayExtensionSpyObserver.m; sourceTree = "<group>"; };
 		D447056E19CA6F6300B85F23 /* TodayExtensionSpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayExtensionSpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D447057219CA6F6300B85F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D447057319CA6F6300B85F23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,10 +84,6 @@
 		D44705A219CA6FA600B85F23 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		D44705A319CA6FA600B85F23 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		D44705A519CA6FA600B85F23 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
-		D44705B019CA713F00B85F23 /* AQSTodayExtensionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQSTodayExtensionSpy.h; sourceTree = "<group>"; };
-		D44705B119CA713F00B85F23 /* AQSTodayExtensionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSTodayExtensionSpy.m; sourceTree = "<group>"; };
-		D44705B319CA729000B85F23 /* AQSTodayExtensionSpyObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQSTodayExtensionSpyObserver.h; sourceTree = "<group>"; };
-		D44705B419CA729000B85F23 /* AQSTodayExtensionSpyObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSTodayExtensionSpyObserver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +112,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D42440F019CB0184005EEDE6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D42440F519CB01CF005EEDE6 /* AQSTodayExtensionSpyObserver.h */,
+				D42440F619CB01CF005EEDE6 /* AQSTodayExtensionSpyObserver.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D42440F119CB018B005EEDE6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D42440F219CB01C7005EEDE6 /* AQSTodayExtensionSpy.h */,
+				D42440F319CB01C7005EEDE6 /* AQSTodayExtensionSpy.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		D447056519CA6F6300B85F23 = {
 			isa = PBXGroup;
 			children = (
@@ -136,12 +154,11 @@
 		D447057019CA6F6300B85F23 /* TodayExtensionSpy */ = {
 			isa = PBXGroup;
 			children = (
+				D42440F019CB0184005EEDE6 /* Classes */,
 				D447057519CA6F6300B85F23 /* AppDelegate.h */,
 				D447057619CA6F6300B85F23 /* AppDelegate.m */,
 				D447057819CA6F6300B85F23 /* ViewController.h */,
 				D447057919CA6F6300B85F23 /* ViewController.m */,
-				D44705B319CA729000B85F23 /* AQSTodayExtensionSpyObserver.h */,
-				D44705B419CA729000B85F23 /* AQSTodayExtensionSpyObserver.m */,
 				D447057B19CA6F6300B85F23 /* Main.storyboard */,
 				D447057E19CA6F6300B85F23 /* Images.xcassets */,
 				D447058019CA6F6300B85F23 /* LaunchScreen.xib */,
@@ -189,10 +206,9 @@
 			children = (
 				D44705A219CA6FA600B85F23 /* TodayViewController.h */,
 				D44705A319CA6FA600B85F23 /* TodayViewController.m */,
+				D42440F119CB018B005EEDE6 /* Classes */,
 				D44705A519CA6FA600B85F23 /* MainInterface.storyboard */,
 				D44705A019CA6FA600B85F23 /* Supporting Files */,
-				D44705B019CA713F00B85F23 /* AQSTodayExtensionSpy.h */,
-				D44705B119CA713F00B85F23 /* AQSTodayExtensionSpy.m */,
 			);
 			path = testtoday;
 			sourceTree = "<group>";
@@ -337,7 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D44705B519CA729000B85F23 /* AQSTodayExtensionSpyObserver.m in Sources */,
+				D42440F719CB01CF005EEDE6 /* AQSTodayExtensionSpyObserver.m in Sources */,
 				D447057A19CA6F6300B85F23 /* ViewController.m in Sources */,
 				D447057719CA6F6300B85F23 /* AppDelegate.m in Sources */,
 				D447057419CA6F6300B85F23 /* main.m in Sources */,
@@ -356,7 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D44705B219CA713F00B85F23 /* AQSTodayExtensionSpy.m in Sources */,
+				D42440F419CB01C7005EEDE6 /* AQSTodayExtensionSpy.m in Sources */,
 				D44705A419CA6FA600B85F23 /* TodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,6 +590,7 @@
 				D447059319CA6F6300B85F23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D447059419CA6F6300B85F23 /* Build configuration list for PBXNativeTarget "TodayExtensionSpyTests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +599,7 @@
 				D447059619CA6F6300B85F23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D44705AC19CA6FA600B85F23 /* Build configuration list for PBXNativeTarget "testtoday" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +608,7 @@
 				D44705AE19CA6FA600B85F23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

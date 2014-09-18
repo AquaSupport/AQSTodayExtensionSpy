@@ -3,13 +3,14 @@
 //  TodayExtensionSpy
 //
 //  Created by kaiinui on 2014/09/18.
-//  Copyright (c) 2014年 aruamarine. All rights reserved.
+//  Copyright (c) 2014 aruamarine. All rights reserved.
 //
 
 #import "AQSTodayExtensionSpyObserver.h"
 #import <UIKit/UIKit.h>
 
 NSString *const kAQSTodayExtensionSpyStatusDidChangeNotification = @"AQSTodayExtensionSpyStatusDidChangeNotification";
+NSString *const kAQSTodayExtensionSpyHasOpenedKey = @"AQSTodayExtensionSpyHasOpened";
 
 @interface AQSTodayExtensionSpyObserver ()
 
@@ -26,7 +27,14 @@ NSString *const kAQSTodayExtensionSpyStatusDidChangeNotification = @"AQSTodayExt
 }
 
 - (BOOL)hasTodayExtensionOpened {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:kAQSTodayExtensionSpyHasOpenedKey] == YES) {
+        return YES;
+    }
+    
     UIPasteboard *pasteboard = [self pasteboard];
+    if (pasteboard.string) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kAQSTodayExtensionSpyHasOpenedKey];
+    }
     return !!pasteboard.string;
 }
 

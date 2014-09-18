@@ -3,7 +3,7 @@
 //  TodayExtensionSpy
 //
 //  Created by kaiinui on 2014/09/18.
-//  Copyright (c) 2014年 aruamarine. All rights reserved.
+//  Copyright (c) 2014 aruamarine. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -37,7 +37,10 @@ extern NSString *const kAQSTodayExtensionSpyStatusDidChangeNotification;
 
 /**
  *  Returns last opened date.
- *  It returns `nil` if `- hasTodayExtensionOpened` = `NO`.
+ *  It returns `nil` if
+ *
+ *  1. Pasteboard is cleared (Pasteboard will be cleared when the app is terminated or the runtime restarted)
+ *  2. If the user has not opened the extension yet.
  *
  *  @return Last opened date or nil
  */
