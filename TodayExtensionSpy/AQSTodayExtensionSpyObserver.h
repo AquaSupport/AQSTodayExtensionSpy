@@ -14,9 +14,39 @@ extern NSString *const kAQSTodayExtensionSpyStatusDidChangeNotification;
 
 @property (nonatomic, copy) NSString *identifer;
 
+/**
+ *  Instantiate an observer with given identifier.
+ *
+ *  Note:
+ *  `identifier` must be unique among your all apps.
+ *  (e.g.) For app which has bundle identifier `com.example.someapp`, pass an identifier like `com.example.someapp`.
+ *  IT SHOULD BE SAME WITH SPY's IDENTIFIER
+ *
+ *  @param identifier Unique string in your all apps
+ *
+ *  @return instance
+ */
 + (instancetype)observerWithIdentifier:(NSString *)identifier;
+
+/**
+ *  Return if the Today Extension has been opened at least once.
+ *
+ *  @return Whether the today extension has been opened
+ */
 - (BOOL)hasTodayExtensionOpened;
+
+/**
+ *  Returns last opened date.
+ *  It returns `nil` if `- hasTodayExtensionOpened` = `NO`.
+ *
+ *  @return Last opened date or nil
+ */
 - (NSDate *)lastOpenedAtOrNil;
+
+/**
+ *  Posts the notification named `kAQSTodayExtensionSpyStatusDidChangeNotification` when the open status being changed.
+ *  The notification object is nil and does not contain userInfo.
+ */
 - (void)observeStatus;
 
 @end

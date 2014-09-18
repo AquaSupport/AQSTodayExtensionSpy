@@ -11,6 +11,8 @@
 
 #import "AQSTodayExtensionSpy.h"
 
+#import "SharedConst.h"
+
 @interface TodayViewController () <NCWidgetProviding>
 
 @end
@@ -20,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[AQSTodayExtensionSpy spyWithIdentifier:@"org.openaquamarine.todayextensionspy"] didOpenTodayExtension];
+    [[AQSTodayExtensionSpy spyWithIdentifier:@"com.example.someapp"] didOpenTodayExtension];
     // Do any additional setup after loading the view from its nib.
 }
 

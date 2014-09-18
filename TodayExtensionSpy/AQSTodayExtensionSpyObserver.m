@@ -19,39 +19,17 @@ NSString *const kAQSTodayExtensionSpyStatusDidChangeNotification = @"AQSTodayExt
 
 @implementation AQSTodayExtensionSpyObserver
 
-/**
- *  Instantiate an observer with given identifier.
- *
- *  Note:
- *  `identifier` must be unique among your all apps.
- *  (e.g.) For app which has bundle identifier `com.example.someapp`, pass an identifier like `com.example.someapp`.
- *
- *  @param identifier Unique string in your all apps
- *
- *  @return instance
- */
 + (instancetype)observerWithIdentifier:(NSString *)identifier {
     AQSTodayExtensionSpyObserver *observer = [[AQSTodayExtensionSpyObserver alloc] init];
     observer.identifer = identifier;
     return observer;
 }
 
-/**
- *  Return if the Today Extension has been opened at least once.
- *
- *  @return Whether the today extension has been opened
- */
 - (BOOL)hasTodayExtensionOpened {
     UIPasteboard *pasteboard = [self pasteboard];
     return !!pasteboard.string;
 }
 
-/**
- *  Returns last opened date.
- *  It returns `nil` if `- hasTodayExtensionOpened` = `NO`.
- *
- *  @return Last opened date or nil
- */
 - (NSDate *)lastOpenedAtOrNil {
     NSTimeInterval interval = [self timestampOrZero];
     if (interval == 0.f) {
@@ -60,10 +38,6 @@ NSString *const kAQSTodayExtensionSpyStatusDidChangeNotification = @"AQSTodayExt
     return [NSDate dateWithTimeIntervalSince1970:interval];
 }
 
-/**
- *  Posts the notification named `kAQSTodayExtensionSpyStatusDidChangeNotification` when the open status being changed.
- *  The notification object is nil and does not contain userInfo.
- */
 - (void)observeStatus {
     // Dirty hack but neither KVO, NSNotification does not work properly.
     [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(checkPasteboard) userInfo:nil repeats:YES];
@@ -72,6 +46,10 @@ NSString *const kAQSTodayExtensionSpyStatusDidChangeNotification = @"AQSTodayExt
 # pragma mark - Scheduled Method
 
 - (void)checkPasteboard {
+    // Do not check if it has not opened yet.
+    if (![self pasteboard].string) { return; }
+    
+    // If it is the first interval.
     if (self.previousPastebaordString == nil) {
         self.previousPastebaordString = [self pasteboard].string;
     }

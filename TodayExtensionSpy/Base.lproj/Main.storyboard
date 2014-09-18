@@ -23,12 +23,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXO-NR-sxg">
-                                <rect key="frame" x="272" y="412" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="272" y="412" width="75" height="30"/>
+                                <state key="normal" title="Clear Infoe">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="didPushButton:" destination="vXZ-lx-hvc" eventType="touchDown" id="6jm-YQ-kMs"/>
+                                    <action selector="clearInfo:" destination="vXZ-lx-hvc" eventType="touchDown" id="OVA-I7-01M"/>
                                 </connections>
                             </button>
                         </subviews>

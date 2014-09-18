@@ -10,7 +10,7 @@
 
 #import "AQSTodayExtensionSpyObserver.h"
 
-NSString *const kIdentifier = @"org.openaquamarine.todayextensionspy";
+#import "SharedConst.h"
 
 @interface ViewController ()
 
@@ -21,36 +21,22 @@ NSString *const kIdentifier = @"org.openaquamarine.todayextensionspy";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    AQSTodayExtensionSpyObserver *observer = [AQSTodayExtensionSpyObserver observerWithIdentifier:kIdentifier];
+    AQSTodayExtensionSpyObserver *observer = [AQSTodayExtensionSpyObserver observerWithIdentifier:kBundleIdentifier];
+    [observer observeStatus];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangeTodayExtensionOpenStatus:) name:kAQSTodayExtensionSpyStatusDidChangeNotification object:nil];
     
     NSLog(@"%hhd", observer.hasTodayExtensionOpened);
     NSLog(@"%@", observer.lastOpenedAtOrNil);
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changed:) name:UIPasteboardChangedNotification object:[UIPasteboard pasteboardWithName:kIdentifier create:NO]];
-    [[UIPasteboard pasteboardWithName:kIdentifier create:NO] addObserver:self forKeyPath:@"string" options:NSKeyValueObservingOptionNew context:NULL];
-    
-    [observer observeStatus];
-    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)changed:(NSNotification *)notification {
-    NSLog(@"%@", notification.userInfo);
-    NSLog(@"%@", notification.object);
-    NSLog(@"%@", notification);
+- (IBAction)clearInfo:(id)sender {
+    [UIPasteboard pasteboardWithName:kBundleIdentifier create:NO].string = @"";
 }
 
-- (void)checkPasteboard {
-    NSString *string = [UIPasteboard pasteboardWithName:kIdentifier create:YES].string;
-    NSLog(@"%@", string);
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    NSLog(@"WHOA");
-}
-
-- (IBAction)didPushButton:(id)sender {
-    [UIPasteboard pasteboardWithName:kIdentifier create:YES].string = @"WHOA";
+- (void)didChangeTodayExtensionOpenStatus:(NSNotification *)notification {
+    NSLog(@"changed!");
 }
 
 - (void)didReceiveMemoryWarning {
