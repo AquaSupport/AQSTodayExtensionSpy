@@ -1,7 +1,42 @@
-AQSIsTodayExtensionAdded
+AQSTodayExtensionSpy
 ========================
 
-Determine whether the Today Extension added to the notification center?
+Determine whether the Today Extension added to the notification center.
+
+```objc
+// In view controller of the App.
+
+AQSTodayExtensionObsever *observer = [AQSTodayExtensionObserver observerWithIdentifier:@"com.example.yourapp"];
+
+observer.hasTodayExtensionOpened; // Returns `YES` or `NO`
+observer.lastOpenedDateOrNil; // Returns last opened `NSDate` or `nil`.
+```
+
+You can receive notifications which will notify when..
+
+1. When the Today Extension opened at first.
+2. When the Today Extension opened. (No matter it is opened at first.)
+
+```objc
+// In the view controller of the App.
+
+AQSTodayExtensionObserver *observer = [AQSTodayExtensionObserver observerWithIdentifier:@"com.example.yourapp"];
+[observer observeOpenStatus];
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangeTodayExtensionOpenStatus:) object:observer];
+```
+
+Note you should put the code in the Today Extension.
+
+```objc
+// In the view controller of the Today Extension
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    AQSTodayExtensionSpy *spy = [AQSTodayExtensionSpy spyWithIdentifier:@"com.example.yourapp"];
+    [spy didOpenTodayExtension];
+}
+```
 
 References
 ---
