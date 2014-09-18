@@ -45,7 +45,11 @@ extern NSString *const kAQSTodayExtensionSpyStatusDidChangeNotification;
 
 /**
  *  Posts the notification named `kAQSTodayExtensionSpyStatusDidChangeNotification` when the open status being changed.
- *  The notification object is nil and does not contain userInfo.
+ *  The notification object is the observer and does not contain userInfo.
+ *      
+ *      AQSTodayExtensionObsever *observer = [AQSTodayExtensionObserver observerWithIdentifier:@"com.example.yourapp"];
+ *      [observer observeStatus];
+ *      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangeTodayExtensionOpenStatus:) object:nil];
  */
 - (void)observeStatus;
 

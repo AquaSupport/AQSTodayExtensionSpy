@@ -76,7 +76,7 @@ NSString *const kAQSTodayExtensionSpyStatusDidChangeNotification = @"AQSTodayExt
 }
 
 - (void)postStatusDidChangeNotification {
-    [[NSNotificationCenter defaultCenter] postNotificationName:kAQSTodayExtensionSpyStatusDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kAQSTodayExtensionSpyStatusDidChangeNotification object:self];
 }
 
 @end
