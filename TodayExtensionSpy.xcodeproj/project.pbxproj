@@ -20,7 +20,6 @@
 		D44705A919CA6FA600B85F23 /* testtoday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D447059B19CA6FA600B85F23 /* testtoday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D44705B219CA713F00B85F23 /* AQSTodayExtensionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = D44705B119CA713F00B85F23 /* AQSTodayExtensionSpy.m */; };
 		D44705B519CA729000B85F23 /* AQSTodayExtensionSpyObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = D44705B419CA729000B85F23 /* AQSTodayExtensionSpyObserver.m */; };
-		D44705B919CA7DE800B85F23 /* SharedConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D44705B819CA7DE800B85F23 /* SharedConst.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +84,6 @@
 		D44705B119CA713F00B85F23 /* AQSTodayExtensionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSTodayExtensionSpy.m; sourceTree = "<group>"; };
 		D44705B319CA729000B85F23 /* AQSTodayExtensionSpyObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQSTodayExtensionSpyObserver.h; sourceTree = "<group>"; };
 		D44705B419CA729000B85F23 /* AQSTodayExtensionSpyObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSTodayExtensionSpyObserver.m; sourceTree = "<group>"; };
-		D44705B719CA7DE800B85F23 /* SharedConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedConst.h; sourceTree = "<group>"; };
-		D44705B819CA7DE800B85F23 /* SharedConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedConst.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +140,6 @@
 				D447057619CA6F6300B85F23 /* AppDelegate.m */,
 				D447057819CA6F6300B85F23 /* ViewController.h */,
 				D447057919CA6F6300B85F23 /* ViewController.m */,
-				D44705B719CA7DE800B85F23 /* SharedConst.h */,
-				D44705B819CA7DE800B85F23 /* SharedConst.m */,
 				D44705B319CA729000B85F23 /* AQSTodayExtensionSpyObserver.h */,
 				D44705B419CA729000B85F23 /* AQSTodayExtensionSpyObserver.m */,
 				D447057B19CA6F6300B85F23 /* Main.storyboard */,
@@ -343,7 +338,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D44705B519CA729000B85F23 /* AQSTodayExtensionSpyObserver.m in Sources */,
-				D44705B919CA7DE800B85F23 /* SharedConst.m in Sources */,
 				D447057A19CA6F6300B85F23 /* ViewController.m in Sources */,
 				D447057719CA6F6300B85F23 /* AppDelegate.m in Sources */,
 				D447057419CA6F6300B85F23 /* main.m in Sources */,

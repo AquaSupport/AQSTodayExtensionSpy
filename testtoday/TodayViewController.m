@@ -11,8 +11,6 @@
 
 #import "AQSTodayExtensionSpy.h"
 
-#import "SharedConst.h"
-
 @interface TodayViewController () <NCWidgetProviding>
 
 @end

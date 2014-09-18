@@ -10,7 +10,7 @@
 
 #import "AQSTodayExtensionSpyObserver.h"
 
-#import "SharedConst.h"
+NSString *const kBundleIdentifier = @"com.example.someapp";
 
 @interface ViewController ()
 

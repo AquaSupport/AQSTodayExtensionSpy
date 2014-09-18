@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A4A288B5-E256-4226-9985-BA6F856EB4F5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TodayExtensionSpy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CC99F6BE96B4BD9CC14C50087920850643FC16A5</key>
+		<string>github.com:AquaSupport/AQSTodayExtensionSpy.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TodayExtensionSpy.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CC99F6BE96B4BD9CC14C50087920850643FC16A5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:AquaSupport/AQSTodayExtensionSpy.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CC99F6BE96B4BD9CC14C50087920850643FC16A5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CC99F6BE96B4BD9CC14C50087920850643FC16A5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TodayExtensionSpy</string>
+		</dict>
+	</array>
+</dict>
+</plist>
