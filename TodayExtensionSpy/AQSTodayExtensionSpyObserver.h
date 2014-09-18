@@ -51,6 +51,6 @@ extern NSString *const kAQSTodayExtensionSpyStatusDidChangeNotification;
  *      [observer observeStatus];
  *      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangeTodayExtensionOpenStatus:) object:nil];
  */
-- (void)observeStatus;
+- (void)observeOpenStatus;
 
 @end

@@ -22,7 +22,7 @@ NSString *const kBundleIdentifier = @"com.example.someapp";
     [super viewDidLoad];
     
     AQSTodayExtensionSpyObserver *observer = [AQSTodayExtensionSpyObserver observerWithIdentifier:kBundleIdentifier];
-    [observer observeStatus];
+    [observer observeOpenStatus];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangeTodayExtensionOpenStatus:) name:kAQSTodayExtensionSpyStatusDidChangeNotification object:observer];
     
     NSLog(@"%hhd", observer.hasTodayExtensionOpened);

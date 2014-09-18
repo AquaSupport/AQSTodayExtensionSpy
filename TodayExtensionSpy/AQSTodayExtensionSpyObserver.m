@@ -38,7 +38,7 @@ NSString *const kAQSTodayExtensionSpyStatusDidChangeNotification = @"AQSTodayExt
     return [NSDate dateWithTimeIntervalSince1970:interval];
 }
 
-- (void)observeStatus {
+- (void)observeOpenStatus {
     // Dirty hack but neither KVO, NSNotification does not work properly.
     [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(checkPasteboard) userInfo:nil repeats:YES];
 }
